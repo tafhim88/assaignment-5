@@ -21,6 +21,14 @@ for (let btn of callBtns) {
 
     alert(`calling ${name} ${number}`);
 
+    // ---------------------------------- coin minus -------------------------------------
+    if (coinNumbr >= 20) {
+      coinNumbr = coinNumbr - 20;
+      coin.innerText = coinNumbr;
+    } else {
+      return alert("Not enough coins!");
+    }
+
     const div = document.createElement("div");
     div.innerHTML = `
       <div class="flex justify-between bg-white items-center rounded-xl w-full">
@@ -36,14 +44,6 @@ for (let btn of callBtns) {
       </div>`;
 
     historyList.appendChild(div);
-
-    // ---------------------------------- coin minus -------------------------------------
-    if (coinNumbr >= 20) {
-      coinNumbr = coinNumbr - 20;
-      coin.innerText = coinNumbr;
-    } else {
-      alert("Not enough coins!");
-    }
   });
 }
 
