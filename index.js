@@ -13,24 +13,24 @@ let heartCount = parseInt(hearticon.innerText);
 const copyCounter = document.getElementById("copy-counter");
 const allCopy = document.getElementsByClassName("copy-btn");
 
-// -------------------for all Call Button-------------------
+// -----------------------------------------for all Call Button-------------------
 
 for (let btn of callBtns) {
   btn.addEventListener("click", function () {
     const card = btn.closest("div.bg-white");
-    const name = card.querySelector("h1").innerText;
+    const name = card.querySelector("h2").innerText;
     const number = card.querySelector(".text-3xl").innerText;
 
-    // call alert----------------------------
+    // --------------------------------------call alert----------------------------
 
-    alert(`calling ${name} ${number}`);
+    alert(`📞calling ${name} ${number}`);
 
     // ---------------------------------- coin minus -------------------------------------
     if (coinNumbr >= 20) {
       coinNumbr = coinNumbr - 20;
       coin.innerText = coinNumbr;
     } else {
-      return alert("Not enough coins!");
+      return alert("Not enough coins, minimum 20 con needed!");
     }
 
     // ---------------------------------------creat call histoy----------------------------------
